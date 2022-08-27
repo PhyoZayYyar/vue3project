@@ -1,15 +1,15 @@
 <template>
   <div class="drop">
-    <div class="modal">
-      <h1>Modal</h1>
-        <p>This Modal Content Box</p>
+    <div class="modal" :class="{success:theme==='success', danger:theme==='danger'}">
+      <h1>{{header}}</h1>
+      <p>{{content}}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  props:["header","content","theme"]
 }
 </script>
 
@@ -30,5 +30,13 @@ export default {
   }
   p{
     font-style: normal;
+  }
+  .success{
+    background-color: green;
+    color:white;
+  }
+  .danger{
+    background-color:rgb(199, 84, 84);
+    color:white;
   }
 </style>
