@@ -1,26 +1,27 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template> 
+    <h1 ref="agreet">Hello</h1>
+    <input type="text" ref="name">
+    <button @click="ClickMe">ClickMe</button>
+    <Modal/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Modal from "./components/Modal.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  data(){
+  },
+  methods:{
+    ClickMe(){
+      this.$refs.name.focus()
+      this.$refs.agreet.textContent="Hee Hee"
+    }
+  },
+  components:{
+    Modal
+}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
