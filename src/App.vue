@@ -1,7 +1,7 @@
 <template> 
     <h1 ref="agreet">Hello</h1>
     <input type="text" ref="name">
-    <button @click="ClickMe">ClickMe</button>
+      <button @click="ClickMe">ClickMe</button>
     <Modal/>
 </template>
 
@@ -18,10 +18,13 @@ export default {
   },
   components:{
     Modal
-}
+  }
 }
 </script>
 
-<style>
-
+<style scoped>
+/* css scoped */
+  h1{
+    color: blue;
+  }
 </style>

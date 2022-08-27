@@ -1,6 +1,7 @@
 <template>
   <div class="drop">
     <div class="modal">
+      <h1>Modal</h1>
         <p>This Modal Content Box</p>
     </div>
   </div>
@@ -12,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .drop{
     position: fixed;
     top:0;
@@ -26,5 +27,8 @@ export default {
     padding:20px;
     background-color: aliceblue;
     border-radius: 10px;
+  }
+  p{
+    font-style: normal;
   }
 </style>
